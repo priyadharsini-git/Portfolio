@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    .toggle-content {
+      display: none;
+      margin-top: 12px;
+      color: #04698b;
+      font-style: italic;
+      font-weight: 500;
+    }
+    .toggle-content.show {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div class="row-card">
+    <h3>B.Tech – Information Technology</h3>
+    <div class="toggle-content">
+      <p>Dhirajlal Gandhi College of Technology – Salem</p>
+      <p>2022 - 2026 | CGPA: 8.13</p>
+    </div>
+  </div>
+
+  <script>
+    document.querySelectorAll('.row-card h3').forEach(title => {
+      title.addEventListener('click', () => {
+        const content = title.nextElementSibling;
+        if (content) {
+          content.classList.toggle('show');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
